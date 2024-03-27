@@ -1,4 +1,7 @@
 # Nuclear Mushroom cream with Pasta
+
+Derived from samples scraped from the bottom of a strangely vacant Nucleation suit... supposedly. All we really know about it is that it's pretty dang delicious.
+
 - Makes: 3-4 servings
 
 ## Ingredients 

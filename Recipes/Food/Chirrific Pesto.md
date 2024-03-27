@@ -1,5 +1,7 @@
 # Chirrific Pesto
 
+Share with your friends/guests/self/forcefully acquainted murderslave! They're bound to love it. Not actually made of Chirr- but is just as delightful.
+
 - Makes: 2-4 servings
 
 ## Ingredients 

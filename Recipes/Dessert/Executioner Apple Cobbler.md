@@ -1,5 +1,7 @@
 # Executioner Apple cobbler
 
+A highly favored dessert in the mess halls of the Aeolan Confederacy. Just as sweet and rich as the victory that warranted the feast.
+
 - Makes: 4-8 servings
 
 ## Ingredients 

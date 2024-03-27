@@ -1,8 +1,10 @@
 # Knightly Meal Prep Chili 
 
+Variant, simplified versions of this recipe are favored by Aeolan knights out in the field, for its relative ease of creation and storage with what's available on hand.
+
 - Makes: 5-7 servings
 
-## Ingredients 
+## Ingredients:
 - 16oz tempeh (or sub for your protein choice)
 - 3 cans of black beans (with the bean liquid)
 - 28oz of tomato sauce
