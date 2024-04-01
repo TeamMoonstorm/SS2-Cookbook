@@ -1,5 +1,9 @@
 # Nemesuis Mule
 
+![Nems having a meal](../Art/nems_meal.webp)
+
+A stranger was quoted this as finding the recipe for this scribbled on a note left behind at their shop in place of cash. Regardless of where it came from, it sure is delicious way to cure those ethereal blues.
+
 ## Ingredients:
 
 - 1.5 oz Vodka (or opt out of the vodka and sub for some fruit juice)

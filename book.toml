@@ -1,0 +1,6 @@
+[book]
+authors = ["SS2 team"]
+language = "en"
+multilingual = false
+src = "src"
+title = "The Very Official Starstorm 2 Cookbook"

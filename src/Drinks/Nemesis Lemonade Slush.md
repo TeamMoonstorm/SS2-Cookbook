@@ -1,5 +1,9 @@
 # Nemesis Lemonade Slush
 
+![Chirr and Cyborg sharing a meal](../Art/chirr_cyborg_eating.webp)
+
+Said to be the creation of a fallen god when their lemonade stand was destroyed by an arrogant interloper. This slush may seem like its the stuff of legends, but it is actually the stuff of easy to find cargo shipments.
+
 - Makes 4-6 servings
 
 ## Ingredients:

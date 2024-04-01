@@ -1,4 +1,6 @@
-# Knightly Meal Prep Chili 
+# Knightly Meal Prep Chili
+
+![Knight eating a meal](../Art/knight_eating.webp)
 
 Variant, simplified versions of this recipe are favored by Aeolan knights out in the field, for its relative ease of creation and storage with what's available on hand.
 

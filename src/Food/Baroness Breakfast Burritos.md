@@ -1,5 +1,7 @@
 # Baroness Breakfast Burritos
 
+![Knight using a wok](../Art/knight_cooking.webp)
+
 - Makes 5-7 servings
 
 ## Ingredients:

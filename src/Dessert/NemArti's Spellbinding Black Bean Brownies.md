@@ -1,5 +1,9 @@
 # NemArti's Spellbinding Black Bean Brownies
 
+![Several nems making a meal together](../Art/nems_cooking.webp)
+
+Requiring near thousand time dilation cycles to perfect. These black beans brownies are sure to be a critical point of the party.
+
 ## Ingredients:
 
 - 1 15oz can black beans (aim for no salt/low sodium)

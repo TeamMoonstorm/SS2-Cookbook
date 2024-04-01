@@ -1,10 +1,13 @@
 # Chirrific Pesto
 
+![Nemesis Merc and Chirr sharing a meal](../Art/nemmerc_chirr_sharing.webp)
+
 Share with your friends/guests/self/forcefully acquainted murderslave! They're bound to love it. Not actually made of Chirr- but is just as delightful.
 
 - Makes: 2-4 servings
 
-## Ingredients 
+## Ingredients:
+
 - 2 cups basil leaves, packed
 - 6 tbsp. water
 - 4 tbsp. Parmesan cheese, grated (vegan parm also works here too)
@@ -16,7 +19,8 @@ Share with your friends/guests/self/forcefully acquainted murderslave! They're b
 - 1/4 tsp. black pepper
 - Pasta of your choice (Fusilli or any pasta with ridges that can capture/keep sauce is recommended)
 
-## Directions: 
+## Directions:
+
 1. Wash the basil leaves and pat dry
 2. Put all the ingredients except pasta into a food processor or blender
 3. Blend the pesto until smooth and the color is a light green. Pesto normally isnt smooth but this recipe is lower on fat so the smoothness has better mouth feel.
