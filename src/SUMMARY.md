@@ -10,3 +10,5 @@
     - [Nemesis Mule](./Drinks/Nemesis%20Mule.md)
     - [Nemesis Lemondade Slush](./Drinks/Nemesis%20Lemonade%20Slush.md)
 - [Desserts](./Desserts.md)
+    - [Executioner's Apple Cobbler](./Dessert/Executioner%20Apple%20Cobbler.md)
+    - [NemArti's Spellbinding Black Bean Brownies](./Dessert/NemArti's%20Spellbinding%20Black%20Bean%20Brownies.md)
