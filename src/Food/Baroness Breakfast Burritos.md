@@ -2,6 +2,8 @@
 
 ![Knight using a wok](../Art/knight_cooking.webp)
 
+Designed for the front lines, and loaded tooth and nail for quick eating. Able to fill your tummy with its protein, and quick to reheat wherever you please, the Baroness Breakfast Burritos are perfect breakfast.
+
 - Makes 5-7 servings
 
 ## Ingredients:
