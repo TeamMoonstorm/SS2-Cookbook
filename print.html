@@ -1,0 +1,513 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>EMERGENCY DATA PACKET ---- INTERCEPTING ----</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="Introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="Food.html"><strong aria-hidden="true">2.</strong> Food</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Food/Baroness Breakfast Burritos.html"><strong aria-hidden="true">2.1.</strong> Baroness Breakfast Burritos</a></li><li class="chapter-item expanded "><a href="Food/Knightly Meal Prep Chili.html"><strong aria-hidden="true">2.2.</strong> Knightly Meal Prep Chili</a></li><li class="chapter-item expanded "><a href="Food/Chirrific Pesto.html"><strong aria-hidden="true">2.3.</strong> Chirrific Pesto</a></li><li class="chapter-item expanded "><a href="Food/Nuclear Mushroom Cream Pasta.html"><strong aria-hidden="true">2.4.</strong> Nuclear Mushroom Cream Pasta</a></li></ol></li><li class="chapter-item expanded "><a href="Drinks.html"><strong aria-hidden="true">3.</strong> Drinks</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Drinks/Nemesis Mule.html"><strong aria-hidden="true">3.1.</strong> Nemesis Mule</a></li><li class="chapter-item expanded "><a href="Drinks/Nemesis Lemonade Slush.html"><strong aria-hidden="true">3.2.</strong> Nemesis Lemonade Slush</a></li></ol></li><li class="chapter-item expanded "><a href="Desserts.html"><strong aria-hidden="true">4.</strong> Desserts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Dessert/Executioner Apple Cobbler.html"><strong aria-hidden="true">4.1.</strong> Executioner's Apple Cobbler</a></li><li class="chapter-item expanded "><a href="Dessert/NemArti's Spellbinding Black Bean Brownies.html"><strong aria-hidden="true">4.2.</strong> NemArti's Spellbinding Black Bean Brownies</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">EMERGENCY DATA PACKET ---- INTERCEPTING ----</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><img src="./Art/nemmerc_steak.webp" alt="" /></p>
+<p>Happy April 1st Starstormers!</p>
+<p>While the team works hard on the next update. We hope you enjoy this small labor of love. We've compiled a small cookbook of some of our favorite (even family) recipes. We hope you enjoy them as much as we do!</p>
+<div style="break-before: page; page-break-before: always;"></div><p><img src="./Art/nemmando_grill.webp" alt="" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="baroness-breakfast-burritos"><a class="header" href="#baroness-breakfast-burritos">Baroness Breakfast Burritos</a></h1>
+<p><img src="Food/../Art/knight_cooking.webp" alt="Knight using a wok" /></p>
+<p>Designed for the front lines, and loaded tooth and nail for quick eating. Able to fill your tummy with its protein, and quick to reheat wherever you please, the Baroness Breakfast Burritos are perfect breakfast.</p>
+<ul>
+<li>Makes 5-7 servings</li>
+</ul>
+<h2 id="ingredients"><a class="header" href="#ingredients">Ingredients:</a></h2>
+<ul>
+<li>5-7 tortillas of your choosing. Ideally bigger variety so the burritos arent bursting</li>
+<li>12oz of ground meat (vegan or real)</li>
+<li>1 yellow onion</li>
+<li>2 cloves garlic</li>
+<li>1 bell pepper</li>
+<li>1 15oz can black beans</li>
+<li>Soy sauce</li>
+<li>Adobo seasoning</li>
+<li>Honey (to taste)</li>
+<li>Salt (to taste)</li>
+<li>Half a lime</li>
+<li>(Optional) 1 bay leaf</li>
+<li>(Optional) 1/2 cup of salsa</li>
+<li>(Optional) 1 can of corn</li>
+</ul>
+<h2 id="directions"><a class="header" href="#directions">Directions:</a></h2>
+<ol>
+<li>Grab a pot and place beans with liquid in on low. Add soy sauce, adobo, honey, and salt to taste. Let simmer while you cook the rest or until the beans have thickned and most liquid is gone.</li>
+<li>Dice the onion and bell pepper. Mince the</li>
+<li>Place half the diced onions and the corn/bay leaf (if you have) in the pot with the beans.</li>
+<li>In a separate pan, cook the ground meat with the rest of the onions and bell pepper.</li>
+<li>Season the meat with soy sauce, adobo, and salt to taste.</li>
+<li>Squeeze the lime over the meat after it is cooked. Add garlic at this point too.</li>
+<li>IMPORTANT! (so they dont get soggy). Place your cooked protein flat on a plate and put it in the fridge. It is important no heat is left so it doesnt make the tortilla soggy when stored</li>
+<li>Repeat the same step for your beans (place in a bowl instead of plate)</li>
+<li>Once everything is cooled, assemble your burritos. Place the protein, beans, and salsa in the tortilla. Wrap in aluminum foil and place in the freezer. Place burrito in fridge the day before you plan to eat it.</li>
+</ol>
+<h2 id="notes"><a class="header" href="#notes">Notes:</a></h2>
+<ul>
+<li>You can also throw rice in here too just in keep in mind these will be STUFFED if you do.</li>
+<li>You can swap out the ground meat for more beans if you'd like.</li>
+<li>Tomato paste is also a nice addition to the beans if you want a thicker consistency.</li>
+<li>I don't have cheese or sour cream since its mixed on how well it freezes/thaws, and I am trying to keep saturated fats low. If you want to add it, I would recommend adding layering it on top of the meat during assembly.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="knightly-meal-prep-chili"><a class="header" href="#knightly-meal-prep-chili">Knightly Meal Prep Chili</a></h1>
+<p><img src="Food/../Art/knight_eating.webp" alt="Knight eating a meal" /></p>
+<p>Variant, simplified versions of this recipe are favored by Aeolan knights out in the field, for its relative ease of creation and storage with what's available on hand.</p>
+<ul>
+<li>Makes: 5-7 servings</li>
+</ul>
+<h2 id="ingredients-1"><a class="header" href="#ingredients-1">Ingredients:</a></h2>
+<ul>
+<li>16oz tempeh (or sub for your protein choice)</li>
+<li>3 cans of black beans (with the bean liquid)</li>
+<li>28oz of tomato sauce</li>
+<li>1 cup veggie broth</li>
+<li>10oz Mushrooms</li>
+<li>3 cloves garlic</li>
+<li>1 Onion</li>
+<li>Olive Oil</li>
+<li>Seasonings: Chili Seasoning, Paprika, Cinnamon, Adobo</li>
+</ul>
+<h2 id="directions-1"><a class="header" href="#directions-1">Directions:</a></h2>
+<h3 id="tempeh"><a class="header" href="#tempeh">Tempeh:</a></h3>
+<ol>
+<li>Cut tempeh into small crouton sized cubes
+<ul>
+<li>Optional: If you want to remove some of the bitterness of tempeh. You can put it in a microwave safe bowl with salted water. Microwave for 3 minutes and drain it. (the bowl will be very hot!! You might need multiple bowls).</li>
+</ul>
+</li>
+<li>Add the tempeh to the pot</li>
+</ol>
+<h3 id="chili"><a class="header" href="#chili">Chili:</a></h3>
+<ol>
+<li>Cut the onion and mince the garlic to the thickness of your choosing</li>
+<li>Throw everything into a large pot and bring to a boil. Stirring occasionally as to not burn the bottom. Dont add seasoning yet!</li>
+<li>Once boiling set heat to low and let simmer until the chili has been reduced to your desired consistency. Make sure to stir periodically so chili contents dont burn (I like mine sludgy so I simmer for 30ish minutes)</li>
+<li>Season the chili to taste mix it up</li>
+<li>Put the chili into 5-7 containers and place in Fridge. Can keep for 2 weeks, but loses most of its flavor after 1 week</li>
+</ol>
+<h3 id="notes-1"><a class="header" href="#notes-1">Notes:</a></h3>
+<ul>
+<li>We dont add seasonings before reducing because when reducing the chili you can make it overly salty</li>
+<li>We also dont sautee garlic/onion because it can be overcooked in the pot when simmering</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chirrific-pesto"><a class="header" href="#chirrific-pesto">Chirrific Pesto</a></h1>
+<p><img src="Food/../Art/nemmerc_chirr_sharing.webp" alt="Nemesis Merc and Chirr sharing a meal" /></p>
+<p>Share with your friends/guests/self/forcefully acquainted murderslave! They're bound to love it. Not actually made of Chirr- but is just as delightful.</p>
+<ul>
+<li>Makes: 2-4 servings</li>
+</ul>
+<h2 id="ingredients-2"><a class="header" href="#ingredients-2">Ingredients:</a></h2>
+<ul>
+<li>2 cups basil leaves, packed</li>
+<li>6 tbsp. water</li>
+<li>4 tbsp. Parmesan cheese, grated (vegan parm also works here too)</li>
+<li>1/4 cup pine nuts</li>
+<li>1 tbsp. olive oil</li>
+<li>3 cloves garlic</li>
+<li>2 tbsp. lemon juice</li>
+<li>1/4 tsp. salt</li>
+<li>1/4 tsp. black pepper</li>
+<li>Pasta of your choice (Fusilli or any pasta with ridges that can capture/keep sauce is recommended)</li>
+</ul>
+<h2 id="directions-2"><a class="header" href="#directions-2">Directions:</a></h2>
+<ol>
+<li>Wash the basil leaves and pat dry</li>
+<li>Put all the ingredients except pasta into a food processor or blender</li>
+<li>Blend the pesto until smooth and the color is a light green. Pesto normally isnt smooth but this recipe is lower on fat so the smoothness has better mouth feel.</li>
+<li>Store the pesto in a container and set aside in the fridge</li>
+<li>Cook pasta according to package instructions</li>
+<li>Drain/rinse the pasta</li>
+<li>Combine the pesto sauce and pasta. Use as much of the pesto you want, but normally this serving of pesto can coat a whole box of Fusilli</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="nuclear-mushroom-cream-with-pasta"><a class="header" href="#nuclear-mushroom-cream-with-pasta">Nuclear Mushroom cream with Pasta</a></h1>
+<p><img src="Food/../Art/exe_roast.webp" alt="Executioner roasting meat over a camp fire" /></p>
+<p>Derived from samples scraped from the bottom of a strangely vacant Nucleation suit... supposedly. All we really know about it is that it's pretty dang delicious.</p>
+<ul>
+<li>Makes: 3-4 servings</li>
+</ul>
+<h2 id="ingredients-3"><a class="header" href="#ingredients-3">Ingredients:</a></h2>
+<ul>
+<li>500 Gr of Mushrooms</li>
+<li>400 Grs of Heavy Whipping Cream</li>
+<li>A teaspoon of Chili powder</li>
+<li>2 slices of your desired cheese</li>
+<li>Half a teaspoon of Pepper</li>
+<li>Cornstarch</li>
+<li>One bag of pasta to your taste</li>
+</ul>
+<h2 id="directions-3"><a class="header" href="#directions-3">Directions:</a></h2>
+<h3 id="pasta"><a class="header" href="#pasta">Pasta:</a></h3>
+<ol>
+<li>Using a sufficiently large pot, season enough water to taste with salt then bring to a boil.</li>
+<li>Place your pasta onto the pot, stir to avoid the pasta from sticking to each other</li>
+<li>Cook until Al Dente or to your preference</li>
+</ol>
+<h3 id="mushroom-cream"><a class="header" href="#mushroom-cream">Mushroom Cream:</a></h3>
+<ol>
+<li>Pour the entire contents of your mushrooms into a pot, if the mushrooms are too much for your pot, cook them until they shrink in size</li>
+<li>Once all the mushrooms are in and heavily cooked, add 400 grams of Heavy Whipping Cream</li>
+<li>Pour the teaspoon of Chili powder, half a teaspoon of pepper, and salt to taste.</li>
+<li>Put the two slices of cheese into the cream, mix until combined, leave to cook.</li>
+</ol>
+<h3 id="notes-2"><a class="header" href="#notes-2">Notes:</a></h3>
+<p>The combination of the Fats and Cream will give your mushroom cream a heat that doesnt overstay its welcome. Feel free to go with more heat if you can handle it.</p>
+<div style="break-before: page; page-break-before: always;"></div><p>=CONFIDENTIAL TRANSMISSION=
+=KEYCODE: ABTKODA55591205=
+=AEOLAN CONFEDERACY=</p>
+<p>=[To any knights who hear this, there is a new quest for you.]</p>
+<p>=[To reclaim the honor of your kind.]</p>
+<p>=[To brave the horrors of a yet-unreveled battlefield.]</p>
+<p>=[To slay gods.]</p>
+<p>=[If you seek a path to glory, heed these instructions.]</p>
+<p>=[Go to [REDACTED]. Find the sword.]</p>
+<p>=[Carve a path.]</p>
+<hr />
+<div style="break-before: page; page-break-before: always;"></div><h1 id="nemesis"><a class="header" href="#nemesis">Nemesis</a></h1>
+<p>Mule</p>
+<p><img src="Drinks/../Art/nems_meal.webp" alt="Nems having a meal" /></p>
+<p>A stranger was quoted this as finding the recipe for this scribbled on a note left behind at their shop in place of cash. Regardless of where it came from, it sure is delicious way to cure those ethereal blues.</p>
+<h2 id="ingredients-4"><a class="header" href="#ingredients-4">Ingredients:</a></h2>
+<ul>
+<li>1.5 oz Vodka (or opt out of the vodka and sub for some fruit juice)</li>
+<li>5 oz Coca-Cola</li>
+<li>1/2 oz yuzu juice (you can use concentrate just make sure to dilute)</li>
+<li>1 oz Ginger Beer (get the real shit not Canada Dry)</li>
+<li>Tiny pinch of salt</li>
+</ul>
+<h2 id="directions-4"><a class="header" href="#directions-4">Directions:</a></h2>
+<ol>
+<li>In your drinking vessel add ice.</li>
+<li>Combine the vodka, coke, yuzu juice, ginger beer, and salt to the vessel.</li>
+<li>Stir and enjoy.</li>
+</ol>
+<h3 id="notes-3"><a class="header" href="#notes-3">Notes:</a></h3>
+<ul>
+<li>Nemesis survivors do NOT like Pepsi or Pepsi-Co owned products</li>
+<li>You can switch out the coke for a health gut soda like Olipop or Poppi, but might not taste as good (and you already have vodka....)</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="nemesis-lemonade-slush"><a class="header" href="#nemesis-lemonade-slush">Nemesis Lemonade Slush</a></h1>
+<p><img src="Drinks/../Art/chirr_cyborg_eating.webp" alt="Chirr and Cyborg sharing a meal" /></p>
+<p>Said to be the creation of a fallen god when their lemonade stand was destroyed by an arrogant interloper. This slush may seem like its the stuff of legends, but it is actually the stuff of easy to find cargo shipments.</p>
+<ul>
+<li>Makes 4-6 servings</li>
+</ul>
+<h2 id="ingredients-5"><a class="header" href="#ingredients-5">Ingredients:</a></h2>
+<ul>
+<li>600g frozen berries</li>
+<li>Juice of 2 and a half lemons</li>
+<li>Juice of half a lime</li>
+<li>Pinch of salt</li>
+<li>3 tbsp of a dark honey (or agave nectar)</li>
+<li>Ice cubes</li>
+<li>225ml soda water (but regular water is ok too)</li>
+</ul>
+<h2 id="directions-5"><a class="header" href="#directions-5">Directions:</a></h2>
+<ol>
+<li>Blend everything in a blender and serve immediately.</li>
+</ol>
+<h3 id="notes-4"><a class="header" href="#notes-4">Notes:</a></h3>
+<ul>
+<li>Stick with the classic berries like raspberry, blueberry, blackberry, and strawberry. Ideally the former 3 for their higher tarntness</li>
+<li>You can also use yuzu here if you'd like!</li>
+<li>Adjust the honey to your ideal taste</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><p><img src="./Art/Containment.webp" alt="The origin" /></p>
+<p>Do you see the light? Do you hear the chants of song?</p>
+<p>The Bulwark has perished, but his soul lives on. In us.</p>
+<p>In all of us. The very world harbors His life, as well.</p>
+<p>Do you not believe me?</p>
+<p>Ha. Simply look around. You will find evidence of His presence soon enough.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="executioner-apple-cobbler"><a class="header" href="#executioner-apple-cobbler">Executioner Apple cobbler</a></h1>
+<p><img src="Dessert/../Art/exe_pizza.webp" alt="Executioner putting a pizza in the pizza oven" /></p>
+<p>A highly favored dessert in the mess halls of the Aeolan Confederacy. Just as sweet and rich as the victory that warranted the feast.</p>
+<ul>
+<li>Makes: 4-8 servings</li>
+</ul>
+<h2 id="ingredients-6"><a class="header" href="#ingredients-6">Ingredients:</a></h2>
+<ul>
+<li>4 apples (granny smith or whatever) slice into quarter inch or so pieces</li>
+<li>1 cup water or apple juice</li>
+<li>1/3 cup brown sugar , packed</li>
+<li>1 Tablespoon cornstarch</li>
+<li>1 Tablespoon lemon juice</li>
+<li>1/2 teaspoon vanilla extract</li>
+<li>1 teaspoon ground cinnamon</li>
+<li>1/2 teaspoon ground nutmeg</li>
+<li>1/8 teaspoon salt
+For the batter:</li>
+<li>1 cup all-purpose flour</li>
+<li>1 cup granulated sugar</li>
+<li>2 teaspoons baking powder</li>
+<li>1/4 teaspoon salt</li>
+<li>3/4 cup milk</li>
+<li>5 Tablespoons butter , melted</li>
+<li>ground cinnamon for topping</li>
+</ul>
+<h2 id="directions-6"><a class="header" href="#directions-6">Directions:</a></h2>
+<h3 id="apple-filling"><a class="header" href="#apple-filling">Apple Filling:</a></h3>
+<ol>
+<li>Stir together water, brown sugar, cornstarch, lemon juice, vanilla, cinnamon, nutmeg, and salt in a large saucepan.</li>
+<li>Stir in apples.</li>
+<li>Cook over medium heat for 3-5 minutes.</li>
+</ol>
+<h3 id="batter"><a class="header" href="#batter">Batter:</a></h3>
+<ol>
+<li>In a large bowl mix together the flour, sugar, baking powder, and salt.</li>
+<li>Stir in the milk and melted butter, just until combined.</li>
+</ol>
+<h3 id="assembly"><a class="header" href="#assembly">Assembly:</a></h3>
+<ol>
+<li>Pour the apple filling into whatever oven safe dish will fit it and then pour the batter over it.</li>
+<li>Sprinkle some cinnamon and bake at 400 for 45 minutes or until a knife inserted into the middle passes through clean.</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="nemartis-spellbinding-black-bean-brownies"><a class="header" href="#nemartis-spellbinding-black-bean-brownies">NemArti's Spellbinding Black Bean Brownies</a></h1>
+<p><img src="Dessert/../Art/nems_cooking.webp" alt="Several nems making a meal together" /></p>
+<p>Requiring near thousand time dilation cycles to perfect. These black beans brownies are sure to be a critical point of the party.</p>
+<h2 id="ingredients-7"><a class="header" href="#ingredients-7">Ingredients:</a></h2>
+<ul>
+<li>1 15oz can black beans (aim for no salt/low sodium)</li>
+<li>1 cup pure date syrup</li>
+<li>1/2 cup unsweetened cocoa powder</li>
+<li>3/4 cup rolled oats</li>
+<li>1 tsp baking powder</li>
+<li>1/2 tsp baking soda</li>
+<li>Semisweet chocolate pieces</li>
+<li>1 tsp vanilla extract</li>
+<li>pinch of salt</li>
+<li>(Optional) unsalted unshelled pistachio nuts, finely chopped or walnuts</li>
+</ul>
+<h2 id="directions-7"><a class="header" href="#directions-7">Directions:</a></h2>
+<ol>
+<li>Preheat the oven to 350°F. Line an 8x8-inch cake tin with parchment paper or a 9x9 baking tray. You can also use oil/butter/cooking spray instead of parchment paper</li>
+<li>Drain/rine the black beans. Combine the black beans and date syrup in a food processor and blend until smooth.</li>
+<li>Add the cocoa powder, rolled oats, baking powder, and baking soda to the food processor and blend until smooth.</li>
+<li>Add the vanilla extract and salt to the food processor and blend until smooth.</li>
+<li>Pour the batter into the prepared cake tin or tray and smooth the top with a spatula.</li>
+<li>Sprinkle the chocolate pieces and nuts (if you have) over the top of the batter.</li>
+<li>Bake for 25-35 minutes, or until a toothpick inserted into the center comes out clean. If you used a larger tray you might need a shorter baking time.</li>
+<li>Ideally allow your brownies to cool on a wire rack (or in the fridge) before cutting into squares. (They will be very soft and crumbly when hot.)</li>
+</ol>
+<h3 id="notes-5"><a class="header" href="#notes-5">Notes:</a></h3>
+<ul>
+<li>Adapted from: https://www.youtube.com/watch?v=PeEQPGYKcGE (which itself is taken from ForksOverKnives)</li>
+<li>You could add a bit of gouchang or cayenne pepper to give it a bit of a kick.</li>
+<li>You can also add a bit of instant coffee to enhance the chocolate flavor.</li>
+<li>The salt is there to enhance the sweetness of the brownies.</li>
+<li>Add some butter if you want to play heart health on Typhoon.</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
